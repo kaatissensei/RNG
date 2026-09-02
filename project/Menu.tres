@@ -1,0 +1,35 @@
+[gd_resource type="Theme" format=3 uid="uid://g34ftwedxkxl"]
+
+[sub_resource type="FontFile" id="FontFile_ymob4"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+
+[resource]
+default_font = SubResource("FontFile_ymob4")
+Button/font_sizes/font_size = 100
+Label/font_sizes/font_size = 100
+LineEdit/constants/minimum_character_width = 2
+LineEdit/font_sizes/font_size = 100
+SpinBox/constants/buttons_width = 40

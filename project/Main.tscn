@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://6q62gf21qrx7"]
+
+[ext_resource type="Theme" uid="uid://g34ftwedxkxl" path="res://Menu.tres" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://bkfo306uktalt" path="res://main.gd" id="1_uu6xs"]
+
+[sub_resource type="Gradient" id="Gradient_uu6xs"]
+colors = PackedColorArray(0.3947424, 0.3947424, 0.3947424, 1, 0.43079543, 0.43079543, 0.43079543, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y1bqk"]
+gradient = SubResource("Gradient_uu6xs")
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_y1bqk"]
+RichTextLabel/colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+RichTextLabel/font_sizes/normal_font_size = 300
+
+[sub_resource type="Gradient" id="Gradient_r0du0"]
+offsets = PackedFloat32Array(0, 0.94578314, 0.9939759, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o8r1j"]
+gradient = SubResource("Gradient_r0du0")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pec41"]
+bg_color = Color(0, 0.39607844, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control" unique_id=1308167577]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uu6xs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=840047806]
+
+[node name="BG" type="TextureRect" parent="CanvasLayer" unique_id=2113143252]
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_y1bqk")
+
+[node name="InputMarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=167726247]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 172.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 100
+
+[node name="InputsHBox" type="HBoxContainer" parent="CanvasLayer/InputMarginContainer" unique_id=32513635]
+layout_mode = 2
+
+[node name="NumInput" type="SpinBox" parent="CanvasLayer/InputMarginContainer/InputsHBox" unique_id=898457855]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_glv2v")
+value = 3.0
+rounded = true
+alignment = 1
+
+[node name="From" type="Label" parent="CanvasLayer/InputMarginContainer/InputsHBox" unique_id=1241351737]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("1_glv2v")
+text = "number(s) from"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MinInput" type="SpinBox" parent="CanvasLayer/InputMarginContainer/InputsHBox" unique_id=1642420472]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_glv2v")
+value = 1.0
+alignment = 1
+
+[node name="To" type="Label" parent="CanvasLayer/InputMarginContainer/InputsHBox" unique_id=1066482881]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_glv2v")
+text = "to"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxInput" type="SpinBox" parent="CanvasLayer/InputMarginContainer/InputsHBox" unique_id=732469782]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_glv2v")
+value = 5.0
+alignment = 1
+
+[node name="OutputMarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1836565892]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -260.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="Outputs" type="HBoxContainer" parent="CanvasLayer/OutputMarginContainer" unique_id=1635769159]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Output1" type="RichTextLabel" parent="CanvasLayer/OutputMarginContainer/Outputs" unique_id=1316391608]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_y1bqk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OutputBG" type="TextureRect" parent="CanvasLayer/OutputMarginContainer/Outputs/Output1" unique_id=222825006]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_o8r1j")
+
+[node name="Output2" type="RichTextLabel" parent="CanvasLayer/OutputMarginContainer/Outputs" unique_id=1993620278]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_y1bqk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OutputBG" type="TextureRect" parent="CanvasLayer/OutputMarginContainer/Outputs/Output2" unique_id=1141965448]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_o8r1j")
+
+[node name="Output3" type="RichTextLabel" parent="CanvasLayer/OutputMarginContainer/Outputs" unique_id=1273749250]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_y1bqk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OutputBG" type="TextureRect" parent="CanvasLayer/OutputMarginContainer/Outputs/Output3" unique_id=985695698]
+z_index = -5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_o8r1j")
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=513591073]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -283.0
+offset_top = -236.0
+offset_right = 217.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_glv2v")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pec41")
+text = "Generate"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_get_random_numbers"]
