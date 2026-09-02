@@ -1,35 +1,21 @@
 [gd_resource type="Theme" format=3 uid="uid://g34ftwedxkxl"]
 
-[sub_resource type="FontFile" id="FontFile_ymob4"]
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/100/0/ascent = 0.0
-cache/0/100/0/descent = 0.0
-cache/0/100/0/underline_position = 0.0
-cache/0/100/0/underline_thickness = 0.0
-cache/0/100/0/scale = 1.0
-cache/0/12/0/ascent = 0.0
-cache/0/12/0/descent = 0.0
-cache/0/12/0/underline_position = 0.0
-cache/0/12/0/underline_thickness = 0.0
-cache/0/12/0/scale = 1.0
+[ext_resource type="FontFile" uid="uid://f3o3d6pqjga8" path="res://NotoSansJP-VariableFont_wght.ttf" id="1_ymob4"]
+
+[sub_resource type="FontVariation" id="FontVariation_cm0pq"]
+base_font = ExtResource("1_ymob4")
+variation_embolden = 1.5
+
+[sub_resource type="FontVariation" id="FontVariation_fcfel"]
+base_font = ExtResource("1_ymob4")
+variation_embolden = 1.5
 
 [resource]
-default_font = SubResource("FontFile_ymob4")
+default_font = SubResource("FontVariation_fcfel")
 Button/font_sizes/font_size = 100
+Button/fonts/font = SubResource("FontVariation_cm0pq")
 Label/font_sizes/font_size = 100
+Label/fonts/font = ExtResource("1_ymob4")
 LineEdit/constants/minimum_character_width = 2
 LineEdit/font_sizes/font_size = 100
 SpinBox/constants/buttons_width = 40

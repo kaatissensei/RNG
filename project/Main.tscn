@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://g34ftwedxkxl" path="res://Menu.tres" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://bkfo306uktalt" path="res://main.gd" id="1_uu6xs"]
+[ext_resource type="FontFile" uid="uid://f3o3d6pqjga8" path="res://NotoSansJP-VariableFont_wght.ttf" id="3_r0du0"]
 
 [sub_resource type="Gradient" id="Gradient_uu6xs"]
 colors = PackedColorArray(0.3947424, 0.3947424, 0.3947424, 1, 0.43079543, 0.43079543, 0.43079543, 1)
@@ -10,7 +11,12 @@ colors = PackedColorArray(0.3947424, 0.3947424, 0.3947424, 1, 0.43079543, 0.4307
 gradient = SubResource("Gradient_uu6xs")
 fill_to = Vector2(0, 0)
 
+[sub_resource type="FontVariation" id="FontVariation_td6wd"]
+base_font = ExtResource("3_r0du0")
+variation_embolden = 1.5
+
 [sub_resource type="Theme" id="Theme_y1bqk"]
+default_font = SubResource("FontVariation_td6wd")
 RichTextLabel/colors/default_color = Color(0.078431375, 0.078431375, 0.078431375, 1)
 RichTextLabel/font_sizes/normal_font_size = 300
 
@@ -180,7 +186,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_o8r1j")
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=513591073]
+[node name="Generate" type="Button" parent="CanvasLayer" unique_id=513591073]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -196,4 +202,4 @@ theme = ExtResource("1_glv2v")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pec41")
 text = "Generate"
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_get_random_numbers"]
+[connection signal="pressed" from="CanvasLayer/Generate" to="." method="_get_random_numbers"]
